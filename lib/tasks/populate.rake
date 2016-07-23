@@ -5,7 +5,7 @@ namespace :db do
 		 require 'populator'
 		[Employee].each(&:delete_all)
 		
-		Employee.populate 10 do |employee|
+		Employee.populate 100 do |employee|
 			employee.name = Faker::Name.name
 			employee.address = Faker::Address.street_address
 			employee.age = Faker::Number.number(2)
